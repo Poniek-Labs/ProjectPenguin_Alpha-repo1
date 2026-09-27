@@ -1,0 +1,39 @@
+name: Build Canerix CORE ISO
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Build Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y live-build debootstrap xorriso squashfs-tools
+
+      - name: Configure and Build ISO
+        run: |
+          sudo lb clean --purge
+          lb config \
+            --architectures amd64 \
+            --binary-images iso-hybrid \
+            --distribution trixie \
+            --archive-areas "main contrib non-free-firmware"
+          sudo lb build
+          mv live-image-amd64.hybrid.iso Canerix-CORE-Alpha1-Trixie-amd64.iso
+          sha256sum Canerix-CORE-Alpha1-Trixie-amd64.iso > Canerix-CORE-Alpha1-Trixie-amd64.iso.sha256
+
+      - name: Create Release & Upload Assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            Canerix-CORE-Alpha1-Trixie-amd64.iso
+            Canerix-CORE-Alpha1-Trixie-amd64.iso.sha256
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

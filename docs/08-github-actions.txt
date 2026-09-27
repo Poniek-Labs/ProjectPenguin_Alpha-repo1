@@ -1,0 +1,10 @@
+==================================================
+CANERIX CORE ALPHA 1 - GITHUB ACTIONS SETUP
+==================================================
+Workflow File : .github/workflows/build-iso.yml
+Trigger       : Push to Git tags matching 'v*'
+Target Runner : ubuntu-latest
+Dependencies  : live-build, debootstrap, xorriso, squashfs-tools
+Artifacts     : Canerix-CORE-Alpha1-Trixie-amd64.iso
+                Canerix-CORE-Alpha1-Trixie-amd64.iso.sha256
+==================================================
