@@ -1,0 +1,9 @@
+==================================================
+CANERIX CORE ALPHA 1 - RELEASE SUMMARY
+==================================================
+ISO File     : Canerix-CORE-Alpha1-Trixie-amd64.iso
+Checksum     : e86136790ac89e914447900061c4be9f8730725c9e3f39c35e541dcc5e97cfed  Canerix-CORE-Alpha1-Trixie-amd64.iso
+Base Release : Debian 13 (Trixie)
+Architecture : amd64
+Build Status : Complete
+==================================================

@@ -1,0 +1,19 @@
+# Build Artifacts
+*.iso
+*.hybrid.iso
+*.squashfs
+*.sha256
+*.log
+
+# live-build temporary output directories
+/.build/
+/binary/
+/cache/
+/chroot/
+/chroot.files/
+/chroot.packages/
+/config/binary
+/config/bootstrap
+/config/chroot
+/config/common
+/config/source

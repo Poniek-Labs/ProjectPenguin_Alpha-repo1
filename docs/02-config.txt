@@ -1,0 +1,8 @@
+==================================================
+CANERIX CORE ALPHA 1 - LIVE-BUILD CONFIG
+==================================================
+Distribution : trixie (Debian 13)
+Arch         : amd64
+Archive Areas: main, contrib, non-free-firmware
+Package Trim : None (Standard Debian defaults preserved)
+==================================================

@@ -1,0 +1,8 @@
+==================================================
+CANERIX CORE ALPHA 1 - ENABLED SERVICES
+==================================================
+Build Hook      : config/hooks/live/0100-enable-services.chroot
+Enabled Services:
+  - NetworkManager (Automatic network configuration)
+  - ssh (OpenSSH daemon for remote headless access)
+==================================================

@@ -1,0 +1,9 @@
+==================================================
+CANERIX CORE ALPHA 1 - PACKAGE LIST
+==================================================
+Added Packages:
+- System: linux-image-amd64, live-boot, systemd-sysv
+- Network: network-manager, openssh-server, iproute2, iputils-ping,
+           net-tools, wireless-tools, wpasupplicant, curl, wget, ca-certificates
+- Tools: bash-completion, sudo, nano, vim-tiny, htop, tmux, pciutils, usbutils, tar, unzip, less
+==================================================

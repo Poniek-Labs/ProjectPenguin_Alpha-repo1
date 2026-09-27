@@ -1,0 +1,8 @@
+==================================================
+CANERIX LINUX CORE ALPHA 1 - INITIALIZATION
+==================================================
+Base Distribution : Debian 13 (Trixie)
+Architecture      : amd64
+Image Format      : Hybrid ISO
+Timestamp         : $(date -u)
+==================================================

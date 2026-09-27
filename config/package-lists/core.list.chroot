@@ -1,0 +1,29 @@
+# Base & Live Boot System
+linux-image-amd64
+live-boot
+systemd-sysv
+
+# Networking & Connectivity
+iproute2
+iputils-ping
+net-tools
+network-manager
+openssh-server
+curl
+wget
+ca-certificates
+wireless-tools
+wpasupplicant
+
+# Basic CLI Utilities
+bash-completion
+sudo
+nano
+vim-tiny
+htop
+tmux
+pciutils
+usbutils
+tar
+unzip
+less

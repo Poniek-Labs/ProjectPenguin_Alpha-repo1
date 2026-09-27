@@ -1,0 +1,14 @@
+==================================================
+CANERIX CORE ALPHA 1 - BRANDING DETAILS
+==================================================
+OS Name      : Canerix Linux
+Version      : 1.0-alpha1 (CORE)
+Base OS      : Debian 13 (Trixie)
+Hostname     : canerix-core
+Project      : Project Kestrel
+Organization : Poniek Labs
+Home URL     : https://labs.poniek.ca/canerix/core
+Support URL  : N/A
+Bug Report   : N/A
+Config Files : /etc/os-release, /etc/issue, /etc/motd, /etc/hostname
+==================================================

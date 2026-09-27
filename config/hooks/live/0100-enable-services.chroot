@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+# Enable essential systemd services
+systemctl enable NetworkManager
+systemctl enable ssh
+

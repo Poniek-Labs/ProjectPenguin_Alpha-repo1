@@ -1,0 +1,7 @@
+NAME="Canerix Linux"
+VERSION="Alpha 1 (CORE)"
+ID=canerix
+ID_LIKE=debian
+PRETTY_NAME="Canerix Linux CORE Alpha 1 (Project Kestrel)"
+VERSION_ID="1.0-alpha1"
+HOME_URL="https://labs.poniek.ca/canerix/core"
