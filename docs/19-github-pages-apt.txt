@@ -1,0 +1,7 @@
+==================================================
+CANERIX CORE ALPHA 1 - GITHUB PAGES APT HOSTING
+==================================================
+Host Type      : GitHub Pages (Static Hosting)
+Repository URL : https://Poniek-Labs.github.io/canerix-apt-repo
+Keyring Target : /usr/share/keyrings/canerix-archive-keyring.gpg
+==================================================
