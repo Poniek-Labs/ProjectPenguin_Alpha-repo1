@@ -17,3 +17,6 @@
 /config/chroot
 /config/common
 /config/source
+canerix-test-disk.qcow2
+wget-log*
+*.log
