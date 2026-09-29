@@ -18,16 +18,19 @@ jobs:
       - name: Install Build Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y live-build git
+          sudo apt-get install -y live-build debootstrap git
 
       - name: Build ISO
         run: |
           sudo lb clean --purge
           sudo lb config \
+            --mode debian \
             --architectures amd64 \
             --binary-images iso-hybrid \
             --distribution trixie \
             --archive-areas "main contrib non-free-firmware" \
+            --parent-mirror-bootstrap "http://deb.debian.org/debian/" \
+            --mirror-bootstrap "http://deb.debian.org/debian/" \
             --debian-installer live \
             --debian-installer-gui false \
             --bootappend-install "file=/cdrom/install/preseed.cfg auto=true priority=critical"
