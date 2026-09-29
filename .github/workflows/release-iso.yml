@@ -1,0 +1,52 @@
+name: Build and Release ISO
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Build Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y live-build git
+
+      - name: Build ISO
+        run: |
+          sudo lb clean --purge
+          sudo lb config \
+            --architectures amd64 \
+            --binary-images iso-hybrid \
+            --distribution trixie \
+            --archive-areas "main contrib non-free-firmware" \
+            --debian-installer live \
+            --debian-installer-gui false \
+            --bootappend-install "file=/cdrom/install/preseed.cfg auto=true priority=critical"
+          sudo lb build
+
+      - name: Prepare Release Artifacts
+        run: |
+          TAG_NAME="${{ github.ref_name }}"
+          ISO_NAME="ProjectPenguin-${TAG_NAME}-amd64.iso"
+          mv live-image-amd64.hybrid.iso "$ISO_NAME"
+          sha256sum "$ISO_NAME" > "${ISO_NAME}.sha256"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ProjectPenguin-*.iso
+            ProjectPenguin-*.iso.sha256
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
